@@ -8,7 +8,6 @@ import icon5 from "../assets/icon-5.png";
 import femaleDoctor from "../assets/woman-doctor.jpg";
 import heart from "../assets/heart.png";
 import { FaCheck } from "react-icons/fa";
-import Gap from "../components/ui/Gap";
 type serviceProps = {
   id: number;
   name: string;
