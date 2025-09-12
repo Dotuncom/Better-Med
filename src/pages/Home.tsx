@@ -8,6 +8,7 @@ import icon5 from "../assets/icon-5.png";
 import femaleDoctor from "../assets/woman-doctor.jpg";
 import heart from "../assets/heart.png";
 import { FaCheck } from "react-icons/fa";
+import Gap from "../components/ui/Gap";
 type serviceProps = {
   id: number;
   name: string;
@@ -47,7 +48,7 @@ const Home = () => {
   return (
     <div className="relative">
       <Herosection />
-      <section className="relative min-h-screen lg:min-h-[120vh] bg-primary">
+      <section className="relative min-h-screen  bg-primary">
         <div className="max-w-7xl mx-auto py-20 px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 place-items-center place-content-stretch py-2 gap-y-12">
             {services.map((service) => (
@@ -64,23 +65,23 @@ const Home = () => {
           <img src={heart} alt="" />
         </div>
       </section>
-      <section className="lg:absolute  w-full bottom-1/2 top-full lg:top-[70%] lg:translate-y-1/2 z-40   min-h-screen">
-        <div className="flex flex-col-reverse bg-primary md:bg-transparent md:flex-row lg:gap-8 ">
-          <div className="max-w-md max-h-2xl">
-            <img src={femaleDoctor} alt="" />
+      <section className="  w-full z-40   min-h-screen">
+        <div className="flex w-full flex-col-reverse bg-primary md:bg-transparent md:flex-row lg:gap- ">
+          <div className="max-w- lg:w-[1500px] max-h-1/2">
+            <img src={femaleDoctor} className="w-full h-full bg-cover" alt="" />
           </div>
-          <div className="text-white lg:text-gray-700 border-t  py-2 border-white lg:border-none  px-4">
-            <div className="text-white md:text-gray-400">
+          <div className="text-white w-full lg:text-gray-700 border-t  pl- border-white lg:border-none ">
+            <div className="text-white bg-primary w-full px-4 md:text-gray-400">
               <h3 className="text-[26px] font-Nunito">Fast and Professional</h3>
               <h1 className="text-[40px] font-bold font-Nunito">
                 Why Choose Medical
               </h1>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2  mt-4 lg:mt-12 gap-2 lg:gap-4 ">
+            <div className="grid grid-cols-1 lg:grid-cols-2 px-4 mt-4 lg:mt-30 gap-2 lg:gap-8 ">
               {tasks.map((task) => (
                 <div
                   key={task.id}
-                  className="flex hover:translate-x-5 active:translate-x-5 md:text-gray-700 text-white items-center space-x-2"
+                  className="flex hover:translate-x-5 active:translate-x-5  p-1 text-[18px] md:text-gray-700 text-white items-center space-x-2"
                 >
                   <h1 className="bg-accent  p-1 text-white flex items-center justify-center  h-5 w-5">
                     <FaCheck size={20} />
@@ -92,13 +93,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className='absolute bg-red-700 min-h-screen'>
-        <div className="flex items-center h-md " style={{background:`url(${heart})`}} >
-
-        </div>
-
-      </section>
       
+      <Gap/>
     </div>
   );
 };
