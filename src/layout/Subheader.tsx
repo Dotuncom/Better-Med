@@ -44,10 +44,10 @@ const Subheader = ({ isMobileMenuOpen, toggleMobileMenu }: SubheaderProps) => {
                   </Link>
                   {navItem.dropdown && <FaChevronDown className="ml-1" />}
                   {navItem.dropdown && (
-                    <div className="hidden group-hover:block transition delay-350 duration-500 ease-in-out absolute top-0 mt-14 w-48 bg-white/95 py-2 rounded shadow-lg z-10">
+                    <div className="hidden group-hover:block transition delay-750 duration-500 ease-in-out absolute top-full  w-48 bg-white/95 py-2 rounded shadow-lg z-10">
                       {navItem.dropdown.map((item, index) => (
                         <Link
-                          className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white transition-colors"
+                          className="block px-4 py-2 text-gray-800 hover:bg-blue-500  hover:text-white transition-colors"
                           key={index}
                           to={item.href}
                         >
@@ -66,7 +66,7 @@ const Subheader = ({ isMobileMenuOpen, toggleMobileMenu }: SubheaderProps) => {
                   <a
                     key={social.name}
                     href={social.href}
-                    className="text-white hover:bg-blue-700 p-2 rounded transition-all duration-300"
+                    className="text-white hover:bg-blue-700 p-2 rounded transition-all hover:rotate-y-360 duration-00 ease-in-out"
                     aria-label={social.name}
                   >
                     <IconComponent className="h-4 w-4" />
@@ -137,7 +137,7 @@ const Subheader = ({ isMobileMenuOpen, toggleMobileMenu }: SubheaderProps) => {
                   </button>
 
                   {openDropdown === navItem.name && (
-                    <div className="transition delay-350 duration-500 ease-in-out bg-white/10 py-2 rounded-lg z-10">
+                    <div className="transition delay-5 duration-500 ease-in-out bg-white/10 py-2 rounded-lg z-10">
                       {navItem.dropdown.map((item, index) => (
                         <Link
                           onClick={toggleMobileMenu}
@@ -172,7 +172,7 @@ const Subheader = ({ isMobileMenuOpen, toggleMobileMenu }: SubheaderProps) => {
                   <a
                     key={social.name}
                     href={social.href}
-                    className="text-white p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors"
+                    className="text-white p-3 bg-white/10 transform hover:rotate-x-360 duration-00 rounded-full hover:bg-white/20 transition-colors"
                     aria-label={social.name}
                     target="_blank"
                     rel="noopener noreferrer"

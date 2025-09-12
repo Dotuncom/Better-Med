@@ -1,4 +1,4 @@
-import { FaBars, FaInfo } from "react-icons/fa";
+import { FaBars, FaHeadset, } from "react-icons/fa";
 import Subheader from "./Subheader";
 import logo from "../assets/logo-logistic.png";
 
@@ -9,7 +9,7 @@ interface HeaderProps {
 
 const Header = ({ isMobileMenuOpen, toggleMobileMenu }: HeaderProps) => {
   return (
-    <div className="relative bg-white shadow-2xl w-full lg:h-54">
+    <div className="relative bg-white shadow-2xl w-full lg:h-40">
       <div className="container mx-auto py-2 lg:py-8 px-4">
         <div className="flex items-center justify-between">
           <div className="w-54 h-14 lg:h-20 lg:w-54">
@@ -17,8 +17,8 @@ const Header = ({ isMobileMenuOpen, toggleMobileMenu }: HeaderProps) => {
           </div>
 
           <div className="hidden lg:flex justify-center items-center gap-8">
-            <div className="flex items-center justify-center">
-              <FaInfo size={40} />
+            <div className="flex items-center gap-x-4 justify-center">
+              <FaHeadset className="text-accent/60 " size={40} />
               <div className="flex flex-col ml-2">
                 <h1 className="font-bold text-sm">
                   Phone: <span> +234 813 866 2406</span>
