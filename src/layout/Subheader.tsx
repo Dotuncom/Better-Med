@@ -137,7 +137,7 @@ const Subheader = ({ isMobileMenuOpen, toggleMobileMenu }: SubheaderProps) => {
                   </button>
 
                   {openDropdown === navItem.name && (
-                    <div className="transition delay-5 duration-500 ease-in-out bg-white/10 py-2 rounded-lg z-10">
+                    <div className="transition delay-5 duration-500 ease-in-out bg-primary/50 py-2 rounded-lg z-10">
                       {navItem.dropdown.map((item, index) => (
                         <Link
                           onClick={toggleMobileMenu}
