@@ -26,7 +26,7 @@ const Subheader = ({ isMobileMenuOpen, toggleMobileMenu }: SubheaderProps) => {
   return (
     <>
       {/* Desktop Navigation */}
-      <div className="hidden lg:block absolute top-full -translate-y-10 left-0 right-0 h-20 w-full px-4 z-50">
+      <div className="hidden lg:block  absolute top-full -translate-y-10 left-0 right-0 h-20 w-full px-4 z-50">
         <div className="container mx-auto">
           <div className="relative w-full flex items-center rounded-2xl justify-between gap-4 bg-primary h-full px-4">
             <div className="w-full flex items-center gap-6">
