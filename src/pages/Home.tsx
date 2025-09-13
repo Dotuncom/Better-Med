@@ -10,8 +10,7 @@ import heart from "../assets/heart.png";
 import { FaCheck } from "react-icons/fa";
 import Gap from "../components/ui/Gap";
 import CounterCard from "../components/ui/Card/CounterCard";
-
-
+import ExperienceAndReach from '../features/home/ExperienceAndReach'
 type serviceProps = {
   id: number;
   name: string;
@@ -54,7 +53,7 @@ const Home = () => {
       <section className="relative min-h-screen  bg-primary">
         <div className="max-w-7xl mx-auto py-20 px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 place-items-center place-content-stretch py-2 gap-y-12">
-            {services.map((service)=>(
+            {services.map((service) => (
               <ServiceCard
                 key={service.id}
                 image={service.path}
@@ -93,27 +92,60 @@ const Home = () => {
                 </div>
               ))}
             </div>
-              </div>
           </div>
-        
-          </section>
-      
-      <Gap/>
-      <section>
-        <div className="bg-no-repeat bg-center min-h-60 p-20" style={{backgroundImage:`url(${heart})`}}>
-             <div className="flex flex-col text-gray-700 items-center justify-center gap-4 ">
-              <h1 className="text-center text-4xl font-bold">We take  <span className='text-primary'> the Time </span>you need</h1>
-              <h3 className="text-[18px] text-center">Best   with over 15years of Experience</h3>
-             </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 place-items-center gap-4 p-10">
-                  <CounterCard end={88} suffix="+" title="Expert personal"/>
-                  <CounterCard end={37} suffix="+" title="Years of Experience"/>
-                  <CounterCard end={18} suffix="K" title="Satisfy customers"/>
         </div>
       </section>
-    </div>  
-  
+
+      <Gap />
+      <section>
+        <div
+          className="bg-no-repeat bg-center min-h-60 p-20"
+          style={{ backgroundImage: `url(${heart})` }}
+        >
+          <div className="flex flex-col text-gray-700 items-center justify-center gap-4 ">
+            <h1 className="text-center text-4xl font-bold">
+              We take <span className="text-primary"> the Time </span>you need
+            </h1>
+            <h3 className="text-[18px] text-center">
+              Best with over 15years of Experience
+            </h3>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 place-items-center gap-4 p-10">
+          <CounterCard end={88} suffix="+" title="Expert personal" />
+          <CounterCard end={37} suffix="+" title="Years of Experience" />
+          <CounterCard end={18} suffix="K" title="Satisfy customers" />
+        </div>
+      </section>
+      <Gap />
+      <section className="">
+        <div className="hidden lg:block border-b border-b-gray-500 p-4">
+          <div className="flex  text-gray-700 justify-evenly p-4 ">
+            <button className=" border-b-2 p-2 border-b-primary relative">
+              Experience and reach
+              <div className=" absolute  top-0 bottom-0  left-1/2 -translate-x-1/2 border-l-5   border-r-5 border-b-8 border-l-transparent border-r-transparent border-b-primary "></div>
+            </button>
+            <button className=" border-b-2 p-2 border-b-primary relative">
+              Technology
+              <div className=" absolute  top-0 bottom-0  left-1/2 -translate-x-1/2 border-l-5   border-r-5 border-b-8 border-l-transparent border-r-transparent border-b-primary "></div>
+            </button>
+            <button className=" border-b-2 p-2 border-b-primary relative">
+              Institution
+              <div className=" absolute  top-0 bottom-0  left-1/2 -translate-x-1/2 border-l-5   border-r-5 border-b-8 border-l-transparent border-r-transparent border-b-primary "></div>
+            </button>
+            <button className=" border-b-2 p-2 border-b-primary relative">
+              Experience doctors
+              <div className=" absolute  top-0 bottom-0  left-1/2 -translate-x-1/2 border-l-5   border-r-5 border-b-8 border-l-transparent border-r-transparent border-b-primary "></div>
+            </button>
+            <button className=" border-b-2 p-2 border-b-primary relative">
+              One-stop care
+              <div className=" absolute  top-0 bottom-0  left-1/2 -translate-x-1/2 border-l-5   border-r-5 border-b-8 border-l-transparent border-r-transparent border-b-primary "></div>
+            </button>
+          </div>
+        </div>
+        <ExperienceAndReach/>
+      </section>
+    </div>
   );
 };
 
