@@ -9,6 +9,9 @@ import femaleDoctor from "../assets/woman-doctor.jpg";
 import heart from "../assets/heart.png";
 import { FaCheck } from "react-icons/fa";
 import Gap from "../components/ui/Gap";
+import CounterCard from "../components/ui/Card/CounterCard";
+
+
 type serviceProps = {
   id: number;
   name: string;
@@ -30,7 +33,7 @@ const services: serviceProps[] = [
   { id: 2, name: "Dentistry Clinic", path: icon5 },
 ];
 
-export const tasks: Task[] = [
+const tasks: Task[] = [
   { id: 1, title: "Scheduling patient", checked: true },
   { id: 2, title: "Preparing blood", checked: true },
   { id: 3, title: "Taking and recording", checked: true },
@@ -51,7 +54,7 @@ const Home = () => {
       <section className="relative min-h-screen  bg-primary">
         <div className="max-w-7xl mx-auto py-20 px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 place-items-center place-content-stretch py-2 gap-y-12">
-            {services.map((service) => (
+            {services.map((service)=>(
               <ServiceCard
                 key={service.id}
                 image={service.path}
@@ -81,21 +84,36 @@ const Home = () => {
               {tasks.map((task) => (
                 <div
                   key={task.id}
-                  className="flex hover:translate-x-5 active:translate-x-5  p-1 text-[18px] md:text-gray-700 text-white items-center space-x-2"
+                  className="flex hover:translate-x-5 active:translate-x-5  hover:text-primary p-1 text-[18px] md:text-gray-700 text-white items-center space-x-2"
                 >
                   <h1 className="bg-accent  p-1 text-white flex items-center justify-center  h-5 w-5">
                     <FaCheck size={20} />
-                  </h1>{" "}
+                  </h1>
                   <span>{task.title}</span>
                 </div>
               ))}
             </div>
+              </div>
           </div>
-        </div>
-      </section>
+        
+          </section>
       
       <Gap/>
-    </div>
+      <section>
+        <div className="bg-no-repeat bg-center min-h-60 p-20" style={{backgroundImage:`url(${heart})`}}>
+             <div className="flex flex-col text-gray-700 items-center justify-center gap-4 ">
+              <h1 className="text-center text-4xl font-bold">We take  <span className='text-primary'> the Time </span>you need</h1>
+              <h3 className="text-[18px] text-center">Best   with over 15years of Experience</h3>
+             </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 place-items-center gap-4 p-10">
+                  <CounterCard end={88} suffix="+" title="Expert personal"/>
+                  <CounterCard end={37} suffix="+" title="Years of Experience"/>
+                  <CounterCard end={18} suffix="K" title="Satisfy customers"/>
+        </div>
+      </section>
+    </div>  
+  
   );
 };
 
