@@ -10,7 +10,8 @@ import heart from "../assets/heart.png";
 import { FaCheck } from "react-icons/fa";
 import Gap from "../components/ui/Gap";
 import CounterCard from "../components/ui/Card/CounterCard";
-import ExperienceAndReach from '../features/home/ExperienceAndReach'
+// import ExperienceAndReach from '../features/home/ExperienceAndReach'
+import Technology from "@/features/home/Technology";
 type serviceProps = {
   id: number;
   name: string;
@@ -143,7 +144,8 @@ const Home = () => {
             </button>
           </div>
         </div>
-        <ExperienceAndReach/>
+        {/* <ExperienceAndReach/> */}
+        <Technology/>
       </section>
     </div>
   );

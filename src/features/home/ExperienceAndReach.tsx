@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa";
 import Gap from "@/components/ui/Gap";
 import heart from "../../assets/heart.png";
 import surgeon from "../../assets/about-1.jpg";
-import doctor from "../../assets/p10-600x480.jpg";
+import doctor from "../../assets/about-2.jpg";
 const ExperienceAndReach = () => {
   return (
     <div
