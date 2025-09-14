@@ -25,7 +25,7 @@ const Technology = () => {
           <div className="min-w-1/2">
             <img src={video} alt="" />
           </div>
-          <div className="w-full space-y-8">
+          <div className="w-full space-y-16.">
             {medicalRating.map((rating) => (
               <div className="flex flex-col gap-1">
                 <div key={rating.id} className="flex justify-between">
