@@ -13,6 +13,7 @@ import CounterCard from "../components/ui/Card/CounterCard";
 // import ExperienceDoctor from "@/features/home/components/ExperienceDoctor";
 import OneStopCare from "@/features/home/components/OneStopCare";
 import Footer from "@/layout/Footer";
+import Partners from "@/features/home/components/Partners";
 // import ExperienceAndReach from '../features/home/ExperienceAndReach'
 // import Technology from "@/features/home/components/Technology";
 // import Institution from "@/features/home/components/Institution";
@@ -154,6 +155,7 @@ const Home = () => {
         {/* <Institution/> */}
         {/* <ExperienceDoctor/> */}
         <OneStopCare/>
+        <Partners/>
       </section>
     </div>
   );
