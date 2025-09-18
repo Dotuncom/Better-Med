@@ -10,8 +10,13 @@ import heart from "../assets/heart.png";
 import { FaCheck } from "react-icons/fa";
 import Gap from "../components/ui/Gap";
 import CounterCard from "../components/ui/Card/CounterCard";
+// import ExperienceDoctor from "@/features/home/components/ExperienceDoctor";
+import OneStopCare from "@/features/home/components/OneStopCare";
+import Footer from "@/layout/Footer";
 // import ExperienceAndReach from '../features/home/ExperienceAndReach'
-import Technology from "@/features/home/Technology";
+// import Technology from "@/features/home/components/Technology";
+// import Institution from "@/features/home/components/Institution";
+
 type serviceProps = {
   id: number;
   name: string;
@@ -145,7 +150,10 @@ const Home = () => {
           </div>
         </div>
         {/* <ExperienceAndReach/> */}
-        <Technology/>
+        {/* <Technology/> */}
+        {/* <Institution/> */}
+        {/* <ExperienceDoctor/> */}
+        <OneStopCare/>
       </section>
     </div>
   );

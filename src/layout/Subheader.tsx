@@ -3,6 +3,7 @@ import { useState } from "react";
 import { mainNav, socialLinks } from "./Navigationdata";
 import { FaShoppingCart, FaSearch, FaChevronDown, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 interface SubheaderProps {
   isMobileMenuOpen: boolean;
@@ -22,6 +23,11 @@ const Subheader = ({ isMobileMenuOpen, toggleMobileMenu }: SubheaderProps) => {
   const toggleDropdown = (name: string) => {
     setOpenDropdown(openDropdown === name ? null : name);
   };
+  const location = useLocation()
+
+  // const isActive =(name:string)=>{
+  //   location.pathname === name || location.pathname.startsWith(name)  ? 'text-green-300':'text-yellow-500'
+  // }
 
   return (
     <>
@@ -30,16 +36,20 @@ const Subheader = ({ isMobileMenuOpen, toggleMobileMenu }: SubheaderProps) => {
         <div className="container mx-auto">
           <div className="relative w-full flex items-center rounded-2xl justify-between gap-4 bg-primary h-full px-4">
             <div className="w-full flex items-center gap-6">
-              {mainNav.map((navItem: NavItem) => (
+              {mainNav.map((navItem: NavItem) => {
+                const   isActive = location.pathname === navItem.href || location.pathname.startsWith(navItem.href)&& navItem.href !== '/' 
+
+                return(
                 <div
                   key={navItem.name}
                   className="relative group flex text-white items-center group"
-                >
-                  {navItem.icon && <navItem.icon className="mr-1" />}
-                  <Link 
-                    to={navItem.href} 
-                    className="flex items-center hover:text-blue-200 transition-colors"
+                > <Link 
+                 to={navItem.href} 
+                    className={`flex items-center hover:text-blue-200 transition-colors ${isActive} `}
                   >
+                  {navItem.icon && <navItem.icon className="mr-1" />}
+                 
+                   
                     {navItem.name}
                   </Link>
                   {navItem.dropdown && <FaChevronDown className="ml-1" />}
@@ -56,8 +66,12 @@ const Subheader = ({ isMobileMenuOpen, toggleMobileMenu }: SubheaderProps) => {
                       ))}
                     </div>
                   )}
+           <div className="absolute top-full left-1/4 min-h-3 w-1 hidden group-hover:block bg-white transition-all ease-in-out duration-200 mt-2"></div>
+
+                {isActive &&  <div className="absolute top-full left-1/4 min-h-3 w-1 bg-white transition-all ease-in-out duration-200 mt-2"></div>}
                 </div>
-              ))}
+                )
+})}
             </div>
             <div className="flex items-center h-full space-x-3">
               {socialLinks.map((social) => {

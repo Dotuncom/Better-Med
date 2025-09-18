@@ -1,7 +1,7 @@
 import { Progress } from "@/components/ui/progress";
-import background from "../../assets/background.jpg";
-import video from "../../assets/p6-600x480.jpg";
-
+import background from "../../../assets/background.jpg";
+import video from "../../../assets/p6-600x480.jpg";
+import { GoVideo } from 'react-icons/go'
 type MedicalRatingProps = {
   id: number;
   name: string;
@@ -22,14 +22,18 @@ const Technology = () => {
     >
       <div className="max-w-7xl px-4 mx-auto">
         <div className="flex flex-col lg:flex-row gap-4">
-          <div className="min-w-1/2">
+          <div className="relative min-w-1/2 hover:scale-105">
             <img src={video} alt="" />
+            <div className="absolute flex items-center justify-center inset-0">
+              
+              < GoVideo className="bg-primary text-white p-4 rounded"  size={80}/>
+            </div>
           </div>
-          <div className="w-full space-y-16.">
+          <div className="w-full  py-10 space-y-16">
             {medicalRating.map((rating) => (
               <div className="flex flex-col gap-1">
                 <div key={rating.id} className="flex justify-between">
-                  <h4>{rating.name}</h4>{" "}
+                  <h4>{rating.name}</h4>
                   <h3 className="text-primary">{rating.value}%</h3>
                 </div>
 

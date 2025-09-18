@@ -1,26 +1,26 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import slider1 from  '../../../assets/slider3.jpg'
-import Header from '../../../layout/Header'
+// import Header from '../../../layout/Header'
 import heart from '../../../assets/heart.png'
 
 const Herosection = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  // const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
+  // const toggleMobileMenu = () => {
+  //   setIsMobileMenuOpen(!isMobileMenuOpen);
+  // };
   return (
     
     <div
-      className='h-105 lg:min-h-screen border-t-4 border-primary  bg-cover bg-center lg:py-20'
+      className='h-105 sticky lg:min-h-screen  border-primary  bg-cover bg-center lg:py-20'
       style={{ backgroundImage: `url(${slider1})` }}
     >
-        <Header 
+        {/* <Header 
         isMobileMenuOpen={isMobileMenuOpen} 
         toggleMobileMenu={toggleMobileMenu} 
-      />
+      /> */}
 
-     <div className='max-w-7xl mx-auto mt-8 lg:mt-20 pb-8  py-2 px-4'>
+     <div className='max-w-7xl mx-auto lg:mt-20 pb-8  py-2 px-4'>
       <div className='max-w-[270px] md:max-w-md lg:max-w-2xl space-y-4 rounded-br-2xl'>
 <img src={heart} alt="heart" className='w-12 h-10 lg:hidden' />
 
