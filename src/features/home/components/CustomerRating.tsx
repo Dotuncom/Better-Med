@@ -11,14 +11,16 @@ const CustomerRating = () => {
 
   return (
     <div className="min-h-screen" style={{backgroundImage:`url(${background})`}}>
-        <div className='container flex gap-2 mx-auto py-10 px-4'>
+        <div className='container flex gap-2 mx-auto  px-4'>
            <Carousel className="w-full h-full">
-        <CarouselContent>
+        <CarouselContent className='h-150 flex items-center'>
           {testimonials.map((testimonial) => (
             <CarouselItem
+            
               key={testimonial.id}
-              className="basis-full  md:basis-1/2 lg:basis-"
+              className="basis-full  md:basis-1/2 lg:basis-1/2 shadow-2xs"
             >
+              
               <TestimonialCard testimonial={testimonial} />
             </CarouselItem>
           ))}
