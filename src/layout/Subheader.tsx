@@ -4,6 +4,7 @@ import { mainNav, socialLinks } from "./Navigationdata";
 import { FaShoppingCart, FaSearch, FaChevronDown, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
 interface SubheaderProps {
   isMobileMenuOpen: boolean;
@@ -25,9 +26,7 @@ const Subheader = ({ isMobileMenuOpen, toggleMobileMenu }: SubheaderProps) => {
   };
   const location = useLocation()
 
-  // const isActive =(name:string)=>{
-  //   location.pathname === name || location.pathname.startsWith(name)  ? 'text-green-300':'text-yellow-500'
-  // }
+  
 
   return (
     <>
@@ -73,18 +72,27 @@ const Subheader = ({ isMobileMenuOpen, toggleMobileMenu }: SubheaderProps) => {
                 )
 })}
             </div>
-            <div className="flex items-center h-full space-x-3">
+            <div className="flex items-center h-full space-x-6">
               {socialLinks.map((social) => {
                 const IconComponent = social.icon;
                 return IconComponent ? (
-                  <a
+                  <Tooltip>
+                    <TooltipTrigger  asChild className="text-white hover:bg-blue-700  px-4 py-4  rounded transition-all hover:rotate-y-360 duration-00 ease-in-out"
+ >
+                      <a
                     key={social.name}
                     href={social.href}
-                    className="text-white hover:bg-blue-700 p-2 rounded transition-all hover:rotate-y-360 duration-00 ease-in-out"
+                    // className="text-white hover:bg-blue-700   rounded transition-all hover:rotate-y-360 duration-00 ease-in-out"
                     aria-label={social.name}
                   >
                     <IconComponent className="h-4 w-4" />
                   </a>
+                    </TooltipTrigger>
+                    <TooltipContent className="text-white font-">
+                        {social.name}
+                    </TooltipContent>
+                  </Tooltip>
+                  
                 ) : null;
               })}
               <div className="border-l h-full border-r p-4 border-gray-100/50">
