@@ -9,7 +9,7 @@ interface HeaderProps {
 
 const Header = ({ isMobileMenuOpen, toggleMobileMenu }: HeaderProps) => {
   return (
-    <div className="z-90 sticky  bg-white shadow-2xl w-full lg:h-40">
+    <div className="z-90 sticky   bg-white shadow-2xl w-full lg:h-40">
       <div className="container mx-auto py-2 lg:py-8 px-4">
         <div className="flex items-center justify-between">
           <div className="w-54 h-14 lg:h-20 lg:w-54">

@@ -15,12 +15,8 @@ const Herosection = () => {
       className='h-105 sticky lg:min-h-screen  border-primary  bg-cover bg-center lg:py-20'
       style={{ backgroundImage: `url(${slider1})` }}
     >
-        {/* <Header 
-        isMobileMenuOpen={isMobileMenuOpen} 
-        toggleMobileMenu={toggleMobileMenu} 
-      /> */}
 
-     <div className='max-w-7xl mx-auto lg:mt-20 pb-8  py-2 px-4'>
+     <div className='max-w-7xl mx-auto lg:mt-20z pb-8  py-2 px-4'>
       <div className='max-w-[270px] md:max-w-md lg:max-w-2xl space-y-4 rounded-br-2xl'>
 <img src={heart} alt="heart" className='w-12 h-10 lg:hidden' />
 

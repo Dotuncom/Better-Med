@@ -10,13 +10,22 @@ const CustomerRating = () => {
 
 
   return (
-    <div className="min-h-screen" style={{backgroundImage:`url(${background})`}}>
-        <div className='container flex gap-2 mx-auto  px-4'>
+    <div className="min-h-screen py-8" style={{backgroundImage:`url(${background})`}}>
+        <div className='container flex flex-col gap-2 mx-auto  space-y-4 px-4'>
+          <div className='text-center'>
+ <h3 className="text-[36px] font-Nuito font-medium text-gray-600">
+                  See what said our <span className="text-primary"> Patient and Visitors</span> 
+                </h3>
+                <h5 className="tracking-5 text-[20px] ">
+                  Our goal is your complete health and wellness
+                </h5>
+          </div>
+         
            <Carousel className="w-full h-full">
         <CarouselContent className='h-150 flex items-center'>
           {testimonials.map((testimonial) => (
             <CarouselItem
-            
+             
               key={testimonial.id}
               className="basis-full  md:basis-1/2 lg:basis-1/2 shadow-2xs"
             >

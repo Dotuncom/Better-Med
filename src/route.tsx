@@ -3,14 +3,11 @@ import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import About from "./pages/About";
 import RootLayout from "./layout/RootLayout";
+import DynamicLayout from "./layout/DynamicLayout";
+import Service from "./pages/Service";
 
-// type AppRoute ={
-//     path:string,
-//     errorElement?: JSX.Element
-//     element:JSX.Element,
-//     children?:AppRoute[]
-// }
-const routes: RouteObject[] = [
+
+const routes:RouteObject[] = [
   {
     path: "/",
     errorElement: <NotFound />,
@@ -18,11 +15,22 @@ const routes: RouteObject[] = [
     children: [
       { index: true, 
         element: <Home /> },
+        
+      
       {
-        path: "/about",
-        element: <About />,
+        element:<DynamicLayout/>,
+        children:[
+          {path:'/about',
+            element:<About/>
+          },
+          {path:'/services',
+           element:<Service/>
+          }
+
+        ]
       },
     ],
   },
 ];
 export const router = createBrowserRouter(routes);
+

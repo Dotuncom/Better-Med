@@ -10,11 +10,11 @@ const TestimonialCard = ({ testimonial }: Props) => {
                 
 
       <div className="flex  z-900 flex-col  items-center justify-center ">
-        <div className=" h-30 w-30  absolute  top-0 rounded-full overflow-hidden  left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center ">
+        <div className=" h-30 w-30  absolute border border-white bg-accent  top-0 rounded-full overflow-hidden  left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center ">
           <img
             src={testimonial.image}
             alt={testimonial.name}
-            className=" h-full w-full  z-90   bg-red-400  border-white shadow-md cover"
+            className=" h-full w-full  z-90 border border-white   bg-accent text-white  shadow-md cover"
           />
         </div>
 

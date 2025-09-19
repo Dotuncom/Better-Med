@@ -81,7 +81,7 @@ const Footer = () => {
   ];
 const currentYear:number = new Date().getFullYear()
   return (
-    <div className="min-screen w-full bg-primary rounded-tl-[100px] py-10 px-4">
+    <div className="min-screen  w-full bg-primary rounded-tl-[100px] py-10 px-4">
       <div className="grid grid-cols-1 md:grid-cols-4 place-items-center gap-8">
         <div className="max-w-[260px] min-h-90 max-h-90  flex flex-col space-y-8 text-gray-300 p-2">
           <div className="w-40 h-12">
