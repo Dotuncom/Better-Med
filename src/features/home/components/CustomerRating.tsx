@@ -3,7 +3,7 @@ import TestimonialCard from '@/components/ui/Card/TestimonialCard'
 import background from '../../../assets/background.jpg'
 import { testimonials } from '@/datas/testimonial';
 
-import { Carousel, CarouselContent, CarouselItem,} from '@/components/ui/carousel';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious,} from '@/components/ui/carousel';
 
 const CustomerRating = () => {
 
@@ -25,10 +25,13 @@ const CustomerRating = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
+        <div className='absolute left-1/2 top-0'>
+        <CarouselPrevious />
+        <CarouselNext />
+        </div>
 
         {/* Navigation buttons */}
-        {/* <CarouselPrevious />
-        <CarouselNext /> */}
+       
       </Carousel>
             
         </div>
