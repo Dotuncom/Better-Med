@@ -21,7 +21,7 @@ const Service = () => {
 ];
   return (
     <div>
-      <section className=" relative  lg:min-h-100 bg-contain bg-no-repeat text-center  py-12  flex  flex-col items-center   bg-center">
+      <section className=" relative w-full  lg:min-h-100 bg-contain bg-no-repeat text-center  py-12  flex  flex-col items-center   bg-center">
         <div className="w-70 h-40 absolute  ">
           <img src={heart} className="h-full w-full bg-contain " alt="" />
         </div>
@@ -32,9 +32,9 @@ const Service = () => {
           with over 15 years of Experience
         </h5>
       </section>
-      <section className="  lg:min-h-screen flex flex-col items-center bg-primary pb-20 pt-10  text-gray-700">
+      <section className="  lg:min-h-screen  flex flex-col items-center bg-primary pb-20 pt-10  text-gray-700">
         <div className="lg:absolute lg:-translate-y-1/2 ">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-20">
             {institutionData.map((data, idx) => (
               <InstitutionCard
                 key={idx}
