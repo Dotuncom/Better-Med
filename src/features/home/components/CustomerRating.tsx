@@ -13,7 +13,7 @@ const CustomerRating = () => {
     <div className="min-h-screen py-8" style={{backgroundImage:`url(${background})`}}>
         <div className='container flex flex-col gap-2 mx-auto  space-y-4 px-4'>
           <div className='text-center'>
- <h3 className="text-[36px] font-Nuito font-medium text-gray-600">
+ <h3 className="text-2xl lg:text-[36px] font-Nuito font-bold text-gray-600">
                   See what said our <span className="text-primary"> Patient and Visitors</span> 
                 </h3>
                 <h5 className="tracking-5 text-[20px] ">

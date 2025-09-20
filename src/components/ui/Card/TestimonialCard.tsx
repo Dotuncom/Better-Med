@@ -6,11 +6,11 @@ interface Props {
 
 const TestimonialCard = ({ testimonial }: Props) => {
   return (
-    <div className="relative bg-white   max-w-7xl  shadow-lg rounded-xl    h-100  text-center  ">
+    <div className="relative bg-white  min-w-12  max-w-4xl  shadow-lg rounded-xl p-4   h-100  text-center  ">
                 
 
       <div className="flex  z-900 flex-col  items-center justify-center ">
-        <div className=" h-30 w-30  absolute border border-white bg-accent  top-0 rounded-full overflow-hidden  left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center ">
+        <div className=" h-30 w-30  absolute border-6 border-accent bg-accent  top-0 rounded-2xl overflow-hidden  left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center ">
           <img
             src={testimonial.image}
             alt={testimonial.name}

@@ -106,10 +106,10 @@ const Home = () => {
       <Gap />
       <section>
         <div
-          className="bg-no-repeat bg-center min-h-60 p-20"
+          className="bg-no-repeat bg-center min-h-60 lg:p-20"
           style={{ backgroundImage: `url(${heart})` }}
         >
-          <div className="flex flex-col text-gray-700 items-center justify-center gap-4 ">
+          <div className="flex flex-col text-gray-700 lg:items-center justify-center lg:gap-4 ">
             <h1 className="text-center text-4xl font-bold">
               We take <span className="text-primary"> the Time </span>you need
             </h1>
@@ -118,7 +118,7 @@ const Home = () => {
             </h3>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 place-items-center gap-4 p-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 place-items-center gap-4 lg:p-10">
           <CounterCard end={88} suffix="+" title="Expert personal" />
           <CounterCard end={37} suffix="+" title="Years of Experience" />
           <CounterCard end={18} suffix="K" title="Satisfy customers" />
