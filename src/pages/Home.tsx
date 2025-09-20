@@ -17,8 +17,7 @@ import CustomerRating from "@/features/home/components/CustomerRating";
 // import ExperienceAndReach from '../features/home/ExperienceAndReach'
 // import Technology from "@/features/home/components/Technology";
 // import Institution from "@/features/home/components/Institution";
-
-type serviceProps = {
+export type serviceProps = {
   id: number;
   name: string;
   path: string;
