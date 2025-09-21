@@ -21,6 +21,7 @@ const routes:RouteObject[] = [
       
       {
         element:<DynamicLayout/>,
+        errorElement:<NotFound/>,
         children:[
           {path:'/about',
             element:<About/>
