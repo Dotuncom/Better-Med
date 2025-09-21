@@ -34,7 +34,7 @@ const Service = () => {
       </section>
       <section className="  lg:min-h-screen  flex flex-col items-center bg-primary pb-20 pt-10  text-gray-700">
         <div className="lg:absolute lg:-translate-y-1/2 ">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-20">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:ap-10">
             {institutionData.map((data, idx) => (
               <InstitutionCard
                 key={idx}

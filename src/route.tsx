@@ -5,6 +5,7 @@ import About from "./pages/About";
 import RootLayout from "./layout/RootLayout";
 import DynamicLayout from "./layout/DynamicLayout";
 import Service from "./pages/Service";
+import Faqs from "./pages/Faqs";
 
 
 const routes:RouteObject[] = [
@@ -25,6 +26,9 @@ const routes:RouteObject[] = [
           },
           {path:'/services',
            element:<Service/>
+          },
+          {path:'/faqs',
+           element:<Faqs/>
           }
 
         ]
