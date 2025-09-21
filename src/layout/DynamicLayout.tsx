@@ -22,7 +22,7 @@ const DynamicLayout = () => {
       
       
 
-      <div className='flex-grow mb-4    '>
+      <div className='flex-grow mb-10    '>
     
         <Outlet/>
       </div>
