@@ -4,7 +4,6 @@ import image1 from '../assets/about-3.jpg'
 import image2 from '../assets/p10-600x480.jpg'
 import image3 from '../assets/p9-300x300.jpg'
 import image4 from '../assets/p8-300x300.jpg'
-import image5 from '../assets/p6-600x480.jpg'
 
 const blogData: BlogCardProps[] = [
   {
