@@ -47,7 +47,7 @@ const blogData: BlogCardProps[] = [
 
 const BlogList = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 place-items-center gap-15">
       {blogData.map((blog) => (
         <BlogCard
         id={blog.id}

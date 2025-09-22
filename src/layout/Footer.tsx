@@ -1,4 +1,4 @@
-import { FaClock, FaLink } from "react-icons/fa";
+import {  FaLink } from "react-icons/fa";
 import logo from "../assets/medical-logo-white.png";
 import img1 from "../assets/p10-300x300.jpg";
 import img2 from "../assets/p6-600x480.jpg";
@@ -10,6 +10,7 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 import type { JSX } from "react";
+import NewsCard from "@/components/ui/Card/NewsCard";
 
 const Footer = () => {
   type newData = {
@@ -114,32 +115,10 @@ const currentYear:number = new Date().getFullYear()
           </div>
 
           {newData.map((news, idx) => (
-            <div
-              key={idx}
-              className="group w-60 border-b py-1 border-b-white/40 h-24 flex items-center justify-center  "
-            >
-              <div className="relative w-30 h-20 rounded overflow-hidden">
-                <div className="absolute inset-0 group-hover:bg-accent/40  flex items-center justify-center">
-                  {" "}
-                  <FaLink />
-                </div>
-                <img
-                  src={news.image}
-                  className="w-full h-full"
-                  alt="new image"
-                />
-              </div>
-              <div className="h-20 w-full space-y-1 p-1">
-                <h4 className="font-semi-bold line-clamp-2">{news.title}</h4>
-                <h4 className="flex items-center gap-1">
-                  {" "}
-                  <span>
-                    <FaClock />{" "}
-                  </span>{" "}
-                  {news.month}
-                </h4>
-              </div>
-            </div>
+           <NewsCard key={idx}
+            image={news.image}
+            title={news.title}
+            month={news.month}/>
           ))}
         </div>
         <div className="min-w-[260px] min-h-90 max-h-90 text-white space-y-2  px-4">

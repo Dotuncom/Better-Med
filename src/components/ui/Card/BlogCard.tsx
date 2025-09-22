@@ -28,7 +28,7 @@ const BlogCard = ({ image, title, date, description, link }: BlogCardProps) => {
             <FaLink className="hidden group-hover:block" />
           </div>
         </div>
-        <div className="flex-grow space-y-4 ">
+        <div className="flex-grow space-y-8 ">
           <div className="flex flex-col justify-center items-center">
             <h1 className="text-[26px] text-center font-Roboto group-hover:text-accent">{title}</h1>
             <button className="min-w-20 h-6 text-[14px]  text-accent bg-gray-300 rounded ">
@@ -38,7 +38,7 @@ const BlogCard = ({ image, title, date, description, link }: BlogCardProps) => {
           </div>
           <p className="text-center text-gray-700 leading-8 font-Nunito">{description}</p>
 
-          <Button className="text-white absolute ">
+          <Button className="text-white absolute left-1/2 -translate-x-1/2  -translate-y-1/2">
             <Link to={link}>view more</Link>
           </Button>
         </div>
