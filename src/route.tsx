@@ -7,9 +7,9 @@ import DynamicLayout from "./layout/DynamicLayout";
 import Service from "./pages/Service";
 import Faqs from "./pages/Faqs";
 import Blog from "./pages/Blog";
-import Products from "./features/products/ProductDetails";
-import ProductDetails from "./features/products/Product";
-
+import Products from "./features/medical-products/Products";
+import ProductDetails from "./features/medical-products/ProductDetails";
+import Shop from "./pages/Shop";
 
 const routes:RouteObject[] = [
   {
@@ -19,6 +19,7 @@ const routes:RouteObject[] = [
     children: [
       { index: true, 
         element: <Home /> },
+       
         
       
       {
@@ -37,14 +38,19 @@ const routes:RouteObject[] = [
             path:'/blog',
             element:<Blog/>
           },
-          {
-            path:'/products',
-            element:<Products/>
-          },
-           {
-            path:'/products/:productId',
-            element:<ProductDetails/>
-          }
+         {
+          path:'/products',
+          element:<Products/>
+         },
+         {
+          path:'/products/:productId',
+          element:<ProductDetails/>
+         }
+           ,
+            {
+          path:'/shop',
+          element:<Shop/>
+        },
 
         ]
       },

@@ -8,7 +8,7 @@ const DynamicLayout = () => {
   const pathname = location.pathname.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 
   return (
-     <div className='relative flex flex-col space-y-'>
+     <div className='relative flex flex-col space-y- mb-12'>
       <div className=' bg-cover flex  bg-center min-h-60' style={{backgroundImage:`url(${slide2})`}}>
         <div className='container mx-auto px-4 pt-20 flex justify-between flex-col '>
          <h1 className=' text-3xl text-gray-700 font-medium font-Roboto'>{pathname}</h1>
