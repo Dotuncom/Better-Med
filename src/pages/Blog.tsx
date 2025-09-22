@@ -43,12 +43,12 @@ const Blog = () => {
     },
   ];
   return (
-    <div className="container mx-auto py-8  px-4">
+    <div className="container mx-auto py-10  px-4">
         <div className="flex lg:flex-row flex-col justify-between items- center gap-20">
 <div>
              <BlogList/>
         </div>
-        <div className="flex flex-col md:flex-row lg:flex-col items-center gap-4 space-y-10">
+        <div className="flex flex-col md:flex-row lg:flex-col items-center gap-  lg:space-y-10">
             <Widget title="Categories"> 
                 <div className="flex flex-col justify-center items-center ">
                   {catgories.map((category)=>(

@@ -1,4 +1,4 @@
-import { FaHome } from "react-icons/fa";
+import { FaAngleDoubleRight, FaHome } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 
 const BreadCrumb = () => {
@@ -8,7 +8,7 @@ const BreadCrumb = () => {
     return `Freqeuntly asked question`;
   }
   return (
-    <div className="flex items-center justify-center gap-2">
+    <div className="flex items-center text-[18px] justify-center gap-2">
       <Link to={'/'}>
             <FaHome />
 
@@ -20,6 +20,7 @@ const BreadCrumb = () => {
         const isLast = index === pathnames.length - 1;
         return (
           <>
+          <FaAngleDoubleRight/>
             {isLast ? (
               <span>{displayNames}</span>
             ) : (

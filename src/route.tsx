@@ -7,6 +7,8 @@ import DynamicLayout from "./layout/DynamicLayout";
 import Service from "./pages/Service";
 import Faqs from "./pages/Faqs";
 import Blog from "./pages/Blog";
+import Products from "./features/products/ProductDetails";
+import ProductDetails from "./features/products/Product";
 
 
 const routes:RouteObject[] = [
@@ -34,6 +36,14 @@ const routes:RouteObject[] = [
           {
             path:'/blog',
             element:<Blog/>
+          },
+          {
+            path:'/products',
+            element:<Products/>
+          },
+           {
+            path:'/products/:productId',
+            element:<ProductDetails/>
           }
 
         ]

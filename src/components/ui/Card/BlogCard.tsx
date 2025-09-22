@@ -13,9 +13,9 @@ export type BlogCardProps = {
 
 const BlogCard = ({ image, title, date, description, link }: BlogCardProps) => {
   return (
-    <div className="group transition-all duration-300 ease-in relative w-[330px] h-[540px] p-10 rounded-2xl border-b border-accent/20">
+    <div className="group transition-all duration-300 ease-in relative w-[330px] h-[540px] lg:w-[400px]  p-10 rounded-2xl border-b border-accent/20">
       <div className="w-full h-full flex flex-col items-center gap-4 justify-center">
-        <div className=" relative w-[315px] h-[315px] border p-2 border-accent/30 rounded">
+        <div className=" relative w-[315px] lg:w-[380px] h-[315px] border p-2 border-accent/30 rounded">
           <div className="">
             <img
               src={image}
@@ -36,9 +36,9 @@ const BlogCard = ({ image, title, date, description, link }: BlogCardProps) => {
               {date}
             </button>
           </div>
-          <p className="text-center text-gray-700 leading-8 font-Nunito">{description}</p>
+          <p className="text-center text-gray-700 leading-6 font-Nunito line-clamp-2">{description}</p>
 
-          <Button className="text-white absolute left-1/2 -translate-x-1/2  -translate-y-1/2">
+          <Button className="text-white absolute left-1/2 -translate-x-1/2  top-full -translate-y-1/2">
             <Link to={link}>view more</Link>
           </Button>
         </div>
