@@ -76,7 +76,7 @@ const Subheader = ({ isMobileMenuOpen, toggleMobileMenu }: SubheaderProps) => {
               {socialLinks.map((social) => {
                 const IconComponent = social.icon;
                 return IconComponent ? (
-                  <Tooltip>
+                  <Tooltip key={social.name}>
                     <TooltipTrigger  asChild className="text-white hover:bg-blue-700  px-4 py-4  rounded transition-all hover:rotate-y-360 duration-00 ease-in-out"
  >
                       <a

@@ -1,12 +1,16 @@
+import MainContent from '@/features/medical-products/MainContent'
 import SideBar from '@/layout/SideBar'
-import React from 'react'
 
 const shop = () => {
+  
   return (
-    <div>
+    <div className='flex min-h-screen'>
       <SideBar/>
+      <div className="rounded w-full flex justify-between flex-wrap">
+        <MainContent/>
+      </div>
     </div>
   )
 }
 
-export default shop
+export default shop 

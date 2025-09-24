@@ -127,7 +127,7 @@ const currentYear:number = new Date().getFullYear()
           </div>
           <div className="flex flex-col  space-y-2 px-2">
             {quickLinks.map((link) => (
-              <h4 className="flex items-center gap-1 hover:translate-x-5 active:translate-x-5 hover:text-accent">
+              <h4 key={link.title} className="flex items-center gap-1 hover:translate-x-5 active:translate-x-5 hover:text-accent">
                 {" "}
                 <span>
                   <FaLink />{" "}

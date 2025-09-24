@@ -18,11 +18,12 @@ const BreadCrumb = () => {
         const displayNames =
          pathname.charAt(0).toUpperCase() + pathname.slice(1);
         const isLast = index === pathnames.length - 1;
+        
         return (
           <>
-          <FaAngleDoubleRight/>
+          <FaAngleDoubleRight />
             {isLast ? (
-              <span>{displayNames}</span>
+              <span key={routeTo} >{displayNames}</span>
             ) : (
               <Link to={routeTo}>{displayNames}</Link>
             )}
