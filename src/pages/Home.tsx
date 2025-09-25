@@ -11,9 +11,9 @@ import { FaCheck } from "react-icons/fa";
 import Gap from "../components/ui/Gap";
 import CounterCard from "../components/ui/Card/CounterCard";
 // import ExperienceDoctor from "@/features/home/components/ExperienceDoctor";
-import OneStopCare from "@/features/home/components/OneStopCare";
 import Partners from "@/features/home/components/Partners";
 import CustomerRating from "@/features/home/components/CustomerRating";
+import TabSection from "@/features/home/components/TabSection";
 // import ExperienceAndReach from '../features/home/ExperienceAndReach'
 // import Technology from "@/features/home/components/Technology";
 // import Institution from "@/features/home/components/Institution";
@@ -73,7 +73,7 @@ const Home = () => {
           <img src={heart} alt="" />
         </div>
       </section>
-      <section className="  w-full z-40   min-h-screen">
+      <section className="  w-full z-40 ">
         <div className="flex w-full flex-col-reverse bg-primary md:bg-transparent md:flex-row lg:gap- ">
           <div className="max-w- lg:w-[1500px] max-h-1/2">
             <img src={femaleDoctor} className="w-full h-full bg-cover" alt="" />
@@ -125,35 +125,9 @@ const Home = () => {
       </section>
       <Gap />
       <section className="">
-        <div className="hidden lg:block border-b border-b-gray-500 p-4">
-          <div className="flex  text-gray-700 justify-evenly p-4 ">
-            <button className=" border-b-2 p-2 border-b-primary relative">
-              Experience and reach
-              <div className=" absolute  top-0 bottom-0  left-1/2 -translate-x-1/2 border-l-5   border-r-5 border-b-8 border-l-transparent border-r-transparent border-b-primary "></div>
-            </button>
-            <button className=" border-b-2 p-2 border-b-primary relative">
-              Technology
-              <div className=" absolute  top-0 bottom-0  left-1/2 -translate-x-1/2 border-l-5   border-r-5 border-b-8 border-l-transparent border-r-transparent border-b-primary "></div>
-            </button>
-            <button className=" border-b-2 p-2 border-b-primary relative">
-              Institution
-              <div className=" absolute  top-0 bottom-0  left-1/2 -translate-x-1/2 border-l-5   border-r-5 border-b-8 border-l-transparent border-r-transparent border-b-primary "></div>
-            </button>
-            <button className=" border-b-2 p-2 border-b-primary relative">
-              Experience doctors
-              <div className=" absolute  top-0 bottom-0  left-1/2 -translate-x-1/2 border-l-5   border-r-5 border-b-8 border-l-transparent border-r-transparent border-b-primary "></div>
-            </button>
-            <button className=" border-b-2 p-2 border-b-primary relative">
-              One-stop care
-              <div className=" absolute  top-0 bottom-0  left-1/2 -translate-x-1/2 border-l-5   border-r-5 border-b-8 border-l-transparent border-r-transparent border-b-primary "></div>
-            </button>
-          </div>
-        </div>
-        {/* <ExperienceAndReach/> */}
-        {/* <Technology/> */}
-        {/* <Institution/> */}
-        {/* <ExperienceDoctor/> */}
-        <OneStopCare/>
+        
+       <TabSection/>
+       
         <Partners/>
         <Gap/>
         <CustomerRating/>

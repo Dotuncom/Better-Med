@@ -6,7 +6,7 @@ import Gap from "@/components/ui/Gap";
 const About = () => {
   return (
     <div className="w-full ">
-      <section className=" relative  lg:min-h-screen bg-contain bg-no-repeat text-center  py-12  flex  flex-col items-center   bg-center">
+      <section className=" relative  lg:h-120 bg-contain bg-no-repeat text-center  py-12  flex  flex-col items-center   bg-center">
         <div className="w-70 h-40 absolute  ">
           <img src={heart} className="h-full w-full bg-contain " alt="" />
         </div>

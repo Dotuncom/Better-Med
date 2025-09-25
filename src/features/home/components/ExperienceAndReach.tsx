@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
-import background from "../../assets/background.jpg";
-import ExperienceDoctor from "../../assets/experience-doctor.jpg";
+import background from "../../../assets/background.jpg";
+import ExperienceDoctor from "../../../assets/experience-doctor.jpg";
 import { FaArrowRight } from "react-icons/fa";
 import Gap from "@/components/ui/Gap";
-import heart from "../../assets/heart.png";
-import surgeon from "../../assets/about-1.jpg";
-import doctor from "../../assets/about-2.jpg";
+import heart from "../../../assets/heart.png";
+import surgeon from "../../../assets/about-3.jpg";
+import doctor from "../../../assets/about-3.jpg";
 const ExperienceAndReach = () => {
   return (
     <div
