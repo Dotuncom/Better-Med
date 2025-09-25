@@ -23,15 +23,7 @@ const MainContent = () => {
       url = `https://dummyjson.com/products/search?q=${keyword}`;
     }
 
-    // const fetchUrl = async()=>{
-    //   const response = await fetch(url)
-    //   const data =await response.json()
-    //   setProducts(data)
-    //   // console.log(data)
-    // }
-    // fetchUrl()
-
-    // axios
+    
     axios
       .get(url)
       .then((response) => {
@@ -89,6 +81,7 @@ const MainContent = () => {
 
   console.log(filteredProducts);
 
+
   const totalProducts = 100;
   const totalPages = Math.ceil(totalProducts / itemsPerPage);
 
@@ -120,7 +113,7 @@ const MainContent = () => {
   return (
     <section
       className="xl:w-full lg:w-[55rem] 
-    sm:w-[40rem] xs:w-[20rem] p-5"
+     xs:w-[20rem] p-5"
     >
       <div className="flex flex-col sm:flex-ro justify-between items-cente">
         <div className="relative mb-4 mt-5">
@@ -135,7 +128,7 @@ const MainContent = () => {
                 onClick={() => setFilter("cheap")}
                 className="block px-4 py-3 w-full text-left hover:bg-accent/70"
               >
-                {" "}
+              
                 Cheap
               </button>
               <button
