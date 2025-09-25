@@ -25,7 +25,7 @@ const Products = () => {
 
   return (
     <div className="container mx-auto px-4 py-10 ">
- <div className="grid grid-cols-4 gap-y-14 gap-x-6">
+ <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-y-14 gap-x-6">
    {loading
         ? Array.from({ length: 8 }).map((_, index) => (
             <div key={index} className="space-y-4">
