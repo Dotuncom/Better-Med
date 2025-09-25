@@ -16,13 +16,13 @@ const shop = () => {
         <MainContent/>
       </div>
 
-      <div className="lg:hidden">
+      <div className="lg:hidden z-50">
         <button onClick={()=>{setOpen(!open)}}>
           {open? <FaTimes size={30} />: <FaBars size={30} /> }
         </button>
 
       </div>
-      <div className={`absolute w-full fixe z-20 min-h-screen left-0 right-0  lg:hidden ${open ? 'translate-x-0':'-translate-x-full'} `}>
+      <div className={`absolute top-0 w-full  z-20 min-h-scree left-0 transform transition-transform duration-300  lg:hidden ${open ? 'translate-x-0':'-translate-x-full'} `}>
       <SideBar/>
  
       </div>
