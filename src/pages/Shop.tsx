@@ -45,12 +45,12 @@ const Shop = () => {
   return (
     <div className='flex min-h-screen'>
       {/* Sidebar for Desktop */}
-      <div className='hidden fixed left-0 lg:block w-64 flex-shrink-0'>
+      <div className='hidden fixed h-full left-0 lg:block w-64 flex-shrink-0'>
         <SideBar />
       </div>
 
       {/* Main Content Area */}     
-      <div className='flex-grow ml-64 p-4 relative'>
+      <div className='flex-grow lg:ml-64 p-4 relative'>
         <MainContent />
       </div>
 
