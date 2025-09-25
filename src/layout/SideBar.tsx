@@ -84,7 +84,7 @@ const SideBar = () => {
     setKeyword('')
   }
   return (
-    <div className="w-64 p-5 min-h-screen bg-primary text-white ">
+    <div className="w-64  p-5 h-screen bg-primary text-white ">
 
       <section>
         

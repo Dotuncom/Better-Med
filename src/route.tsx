@@ -21,7 +21,8 @@ const routes:RouteObject[] = [
         element: <Home /> },
        
         
-      
+      ],
+    },
       {
         element:<DynamicLayout/>,
         children:[
@@ -47,15 +48,16 @@ const routes:RouteObject[] = [
           element:<ProductDetails/>
          }
            ,
-            {
+           
+
+        ],
+        
+        
+  },
+   {
           path:'/shop',
           element:<Shop/>
         },
-
-        ]
-      },
-    ],
-  },
 ];
 export const router = createBrowserRouter(routes);
 

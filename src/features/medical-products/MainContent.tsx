@@ -112,7 +112,7 @@ const MainContent = () => {
   };
   return (
     <section
-      className="xl:w-full lg:w-[55rem] min h-[40%]
+      className=" relative xl:w-full lg:w-[55rem] 
      xs:w-[20rem] p-5"
     >
       <div className="flex flex-col sm:flex-ro justify-between items-cente">
@@ -148,7 +148,7 @@ const MainContent = () => {
             </div>
           )}
         </div>
-        <div className="grid lg:grid-cols-3 sm:grid-cols-2  md:grid-cols-3 gap-x-4 gap-y-14">
+        <div className="grid lg:grid-cols-3 sm:grid-cols-2  md:grid-cols-3 gap-x-10 gap-y-14">
           {/* BookCard */}
           {filteredProducts.map((product) => (
             <ProductCard

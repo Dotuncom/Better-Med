@@ -7,12 +7,12 @@ const shop = () => {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className='relative flex min-h-screen'>
-      <div className='hidden lg:block'>
+    <div className='relative flex w-full justify-between h-screen'>
+      <div className='z-60 w-64 fixed  h-full hidden lg:block'>
       <SideBar/>
  
       </div>
-      <div className="rounded w-full flex justify-between flex-wrap">
+      <div className="flex-grow ml-0  lg:ml-64 p-4 relative rounded w-full flex flex-wrap">
         <MainContent/>
       </div>
 
@@ -22,12 +22,13 @@ const shop = () => {
         </button>
 
       </div>
-      <div className={`absolute top-0 w-full  z-20 min-h-scree left-0 transform transition-transform duration-300  lg:hidden ${open ? 'translate-x-0':'-translate-x-full'} `}>
+      <div className={`fixed bottom-0 top-0  left-0 right-0 w-[90]  z-20 min-h-scree transform transition-transform duration-300  lg:hidden ${open ? 'translate-x-0':'-translate-x-full'} `}>
       <SideBar/>
+
+      </div>
  
       </div>
      
-    </div>
   )
 }
 
