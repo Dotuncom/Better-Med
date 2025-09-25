@@ -2,7 +2,7 @@ import { useFilter } from "@/context/FilterContext";
 import { Tally3 } from "lucide-react";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import BookCard from "@/components/ui/Card/BookCard";
+import ProductCard from "@/components/ui/Card/ProductCard";
 
 const MainContent = () => {
   const { searchQuery, selectedCategory, minPrice, maxPrice, keyword } =
@@ -12,7 +12,7 @@ const MainContent = () => {
   const [filter, setFilter] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
   const [dropdown, setDropdown] = useState(false);
-  const itemsPerPage = 12;
+  const itemsPerPage = 6;
 
   useEffect(() => {
     let url = `https://dummyjson.com/products?limit=${itemsPerPage}&skip=${
@@ -119,7 +119,7 @@ const MainContent = () => {
   };
   return (
     <section
-      className="xl:w-[55rem] lg:w-[55rem] 
+      className="xl:w-full lg:w-[55rem] 
     sm:w-[40rem] xs:w-[20rem] p-5"
     >
       <div className="flex flex-col sm:flex-ro justify-between items-cente">
@@ -155,10 +155,10 @@ const MainContent = () => {
             </div>
           )}
         </div>
-        <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid lg:grid-cols-3 sm:grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-14">
           {/* BookCard */}
           {filteredProducts.map((product) => (
-            <BookCard
+            <ProductCard
               key={product.id}
               id={product.id}
               title={product.title}
@@ -168,7 +168,7 @@ const MainContent = () => {
           ))}
         </div>
       </div>
-      <div className="flex  sm-flex-row justify-between items-center mt-8">
+      <div className="flex  sm-flex-row justify-between items-center mt-20">
         {/* previous */}
         <button
           onClick={() => handlePageChange(currentPage - 1)}

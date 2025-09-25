@@ -12,7 +12,7 @@ const BookCard = ({ id, title, image, price }: BookcardProps) => {
    
   return (
     <div className="shadow">
-      <Link to={`/product/${id}`}>
+      <Link to={`/products/${id}`}>
         <img
           src={image}
           alt={title}

@@ -43,7 +43,7 @@ const routes:RouteObject[] = [
           element:<Products/>
          },
          {
-          path:'/products/:productId',
+          path:'/products/:id',
           element:<ProductDetails/>
          }
            ,
