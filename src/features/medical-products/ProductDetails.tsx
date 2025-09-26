@@ -46,8 +46,8 @@ const ProductDetails = () => {
     addProductToCart, 
     isProductInCart, 
     getProductQuantity, 
-    increaseProductQuantity,
-    decreaseProductQuantity 
+    // increaseProductQuantity,
+    // decreaseProductQuantity 
   } = useCart();
 
   useEffect(() => {

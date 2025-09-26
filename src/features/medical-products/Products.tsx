@@ -44,7 +44,7 @@ const Products = () => {
               key={product.id}
               id={product.id}
               title={product.title}
-              image={product.images}
+              image={Array.isArray(product.images) ? product.images[0] : product.images}
               price={product.price}
             />
           ))
