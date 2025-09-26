@@ -3,8 +3,11 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import type { Product } from "./ProductDetails";
 import { Skeleton } from "@/components/ui/skeleton";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const Products = () => {
+  const navigate = useNavigate()
   const [product, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -22,9 +25,11 @@ const Products = () => {
         setLoading(false)
       );
   }, []);
-
-  return (
+   return (
     <div className="container mx-auto px-4 py-10 ">
+      <Button className="text-white mb-4" onClick={()=>navigate(-1)}>
+        back
+      </Button>
  <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 px-4  gap-y-14 gap-x-6">
    {loading
         ? Array.from({ length: 8 }).map((_, index) => (

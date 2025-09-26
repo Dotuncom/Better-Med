@@ -10,6 +10,7 @@ import Blog from "./pages/Blog";
 import Products from "./features/medical-products/Products";
 import ProductDetails from "./features/medical-products/ProductDetails";
 import Shop from "./pages/Shop";
+import CartPage from "./pages/CartPage";
 
 const routes:RouteObject[] = [
   {
@@ -20,7 +21,10 @@ const routes:RouteObject[] = [
       { index: true, 
         element: <Home /> },
        
-        
+        {
+          path:'/products',
+          element:<Products/>
+         },
       ],
     },
       {
@@ -35,19 +39,23 @@ const routes:RouteObject[] = [
           {path:'/faqs',
            element:<Faqs/>
           },
+          
           {
             path:'/blog',
             element:<Blog/>
           },
-         {
-          path:'/products',
-          element:<Products/>
-         },
+         
          {
           path:'/products/:id',
           element:<ProductDetails/>
          }
            ,
+           {
+          path:'/cart',
+          element:<CartPage/>
+         }
+           ,
+          
            
 
         ],

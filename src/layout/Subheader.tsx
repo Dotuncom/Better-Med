@@ -5,6 +5,7 @@ import { FaShoppingCart, FaSearch, FaChevronDown, FaTimes } from "react-icons/fa
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { useCart } from "@/hooks/UseCart";
 
 interface SubheaderProps {
   isMobileMenuOpen: boolean;
@@ -26,7 +27,7 @@ const Subheader = ({ isMobileMenuOpen, toggleMobileMenu }: SubheaderProps) => {
   };
   const location = useLocation()
 
-  
+  const {totalItemsInCart}= useCart()
 
   return (
     <>
@@ -95,16 +96,21 @@ const Subheader = ({ isMobileMenuOpen, toggleMobileMenu }: SubheaderProps) => {
                   
                 ) : null;
               })}
-              <div className="border-l h-full border-r p-4 border-gray-100/50">
+              <Link to={'/cart'} className=" reative border-l h-full border-r p-4 border-gray-100/50">
                 <div className="relative">
                   <button className="text-white hover:bg-blue-700 p-2 rounded transition-colors">
                     <FaShoppingCart className="h-5 w-5" />
                   </button>
-                  <span className="absolute -top-1 right-0 bg-white text-accent text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
-                    0
+                 
+                    <span className="absolute -top-1 right-0 bg-white text-accent text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                     {totalItemsInCart >0 &&
+                     <h1>{totalItemsInCart}</h1>
+                     }
                   </span>
+                  
+                  
                 </div>
-              </div>
+              </Link>
               <button className="text-white hover:bg-blue-700 p-2 rounded transition-colors">
                 <FaSearch className="h-5 w-5" />
               </button>

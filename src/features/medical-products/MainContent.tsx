@@ -3,8 +3,13 @@ import { Tally3 } from "lucide-react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import ProductCard from "@/components/ui/Card/ProductCard";
+import { Button } from "@/components/ui/button";
+import { FaArrowCircleLeft } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const MainContent = () => {
+      const navigate = useNavigate()
+
   const { searchQuery, selectedCategory, minPrice, maxPrice, keyword } =
     useFilter();
 
@@ -116,6 +121,9 @@ const MainContent = () => {
      xs:w-[20rem] p-5"
     >
       <div className="flex flex-col sm:flex-ro justify-between items-cente">
+<Button onClick={()=>navigate(-1)}>
+<FaArrowCircleLeft/> Back
+</Button>
         <div className="relative mb-4 mt-5">
           <button onClick={()=>setDropdown(!dropdown)} className=" border px-4 py-2 rounded-full flex items-center">
             <Tally3 className="mr-3" />
@@ -135,14 +143,12 @@ const MainContent = () => {
                 onClick={() => setFilter("expensive")}
                 className="block px-4 py-3 w-full text-left hover:bg-accent/70"
               >
-                {" "}
                 Expensive
               </button>
               <button
                 onClick={() => setFilter("popular")}
                 className="block px-4 py-3 w-full text-left hover:bg-accent/70"
               >
-                {" "}
                 Popular
               </button>
             </div>
