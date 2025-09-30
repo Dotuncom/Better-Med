@@ -1,7 +1,7 @@
 import { FaBars, FaHeadset, } from "react-icons/fa";
 import Subheader from "./Subheader";
 import logo from "../assets/logo-logistic.png";
-
+import {motion} from 'motion/react'
 interface HeaderProps {
   isMobileMenuOpen: boolean;
   toggleMobileMenu: () => void;
@@ -28,10 +28,15 @@ const Header = ({ isMobileMenuOpen, toggleMobileMenu }: HeaderProps) => {
                 </h1>
               </div>
             </div>
-            <button className="bg-accent/70 h-12 w-60 rounded-2xl py-2 px-4 text-white font-semibold hover:bg-accent transition-colors">
+            <motion.button
+            animate={{
+              scale:[1.2, 1.1]
+            }}
+            transition={{repeat:Infinity,ease:'easeInOut', duration:3}}
+             className="bg-accent/70 h-12 w-60 rounded-2xl py-2 px-4 text-white font-semibold hover:bg-accent transition-colors">
               Make an Appointment
               
-            </button>
+            </motion.button>
           </div>
 
           {/* Hamburger */}

@@ -157,7 +157,7 @@ const currentYear:number = new Date().getFullYear()
             ))}
           </ul>
         </div>
-              <p className="text-gray-700 mb-4">copyright@ olamdidotun {currentYear }</p>
+              <p className="text-gray-700 mb-4">copyright@ olamidotun {currentYear }</p>
 
       </div>
     </div>

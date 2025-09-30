@@ -1,101 +1,3 @@
-// import React, { createContext, useState } from "react";
-
-// export type CartItem = {
-//   id: number;
-//   name: string;
-//   quantity: number;
-//   price: number;
-// };
-
-// type CartContextType = {
-//   cart: CartItem[];
-//   addToCart: (item: CartItem) => void;
-//   removeFromCart: (id: number) => void;
-//   clearCart: () => void;
-//   getTotal: () => number;
-//   getItemQuantity:(id:number)=>number
-//   increaseCartQuantity:(id:number)=>void;
-//   descreaseCartQuantity:(id:number)=>void;
-// };
-
-// const CartContext = createContext<CartContextType | undefined>(undefined);
-
-// export const CartProvider = ({ children }: { children: React.ReactNode }) => {
-//   const [cart, setCart] = useState<CartItem[]>([]);
-
-//   const getItemQuantity = (id: number): number => {
-//     return cart.find((item) => item.id === id)?.quantity || 0;
-//   };
-
-//   const addToCart = (item: CartItem) => {
-//     setCart((prev) => {
-//       const existing = prev.find((product) => product.id === item.id);
-//       if (existing) {
-//         return prev.map((cartItem) =>
-//           cartItem.id === item.id
-//             ? { ...cartItem, quantity: cartItem.quantity + item.quantity }
-//             : cartItem
-//         );
-//       } else {
-//         return [...prev, item];
-//       }
-//     });
-//   };
-
-//   const increaseCartQuantity = (id: number) => {
-//     setCart((currItems) => {
-//       const found = currItems.find((item) => item.id === id);
-//       if (!found) {
-//         // Add new item with quantity 1 (other fields should be filled as needed)
-//         return [...currItems, { id, name: "", price: 0, quantity: 1 }];
-//       } else {
-//         return currItems.map((item) =>
-//           item.id === id ? { ...item, quantity: item.quantity + 1 } : item
-//         );
-//       }
-//     });
-//   };
-
-//   const descreaseCartQuantity = (id: number) => {0
-//     setCart((currItems) => {
-//       return currItems
-//         .map((item) =>
-//           item.id === id
-//             ? { ...item, quantity: item.quantity > 1 ? item.quantity - 1 : 1 }
-//             : item
-//         )
-//         .filter((item) => item.quantity > 0);
-//     });
-//   };
-
-//   const removeFromCart = (id: number) => {
-//     setCart((prev) => prev.filter((product) => product.id !== id));
-//   };
-
-//   const clearCart = () => {
-//     setCart([]);
-//   };
-
-//   const getTotal = (): number =>
-//     cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-
-//   return (
-//     <CartContext.Provider
-//       value={{
-//         cart,
-//         getItemQuantity,
-//         addToCart,
-//         removeFromCart,
-//         clearCart,
-//         getTotal,
-//         increaseCartQuantity,
-//         descreaseCartQuantity,
-//       }}
-//     >
-//       {children}
-//     </CartContext.Provider>
-//   );
-// };
 import React, { createContext, useState,  } from "react";
 
 // Types - Export these for reuse across your app
@@ -103,10 +5,11 @@ export type CartItem = {
   id: number;
   name: string;
   quantity: number;
+  image?:string,
   price: number;
 };
 
-export type Product = Omit<CartItem, "quantity">; // Reusable product type
+export type Product = Omit<CartItem, "quantity">; 
 
 type CartContextType = {
   cartItems: CartItem[];

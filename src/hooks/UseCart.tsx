@@ -24,7 +24,7 @@ export const useCart = () => {
 
   // Product operations with descriptive names
   const addProductToCart = (product: Product, quantity: number = 1) => {
-    addItemToCart({ ...product, quantity });
+    addItemToCart({ ...product, quantity,  });
   };
 
   const removeProductFromCart = (productId: number) => {

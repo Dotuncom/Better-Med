@@ -7,10 +7,12 @@ import DynamicLayout from "./layout/DynamicLayout";
 import Service from "./pages/Service";
 import Faqs from "./pages/Faqs";
 import Blog from "./pages/Blog";
-import Products from "./features/medical-products/Products";
+// import Products from "./features/medical-products/Products";
 import ProductDetails from "./features/medical-products/ProductDetails";
 import Shop from "./pages/Shop";
 import CartPage from "./pages/CartPage";
+import MainContent from "./features/medical-products/MainContent";
+import Checkout from "./pages/Checkout";
 
 const routes:RouteObject[] = [
   {
@@ -21,10 +23,6 @@ const routes:RouteObject[] = [
       { index: true, 
         element: <Home /> },
        
-        {
-          path:'/products',
-          element:<Products/>
-         },
       ],
     },
       {
@@ -66,6 +64,17 @@ const routes:RouteObject[] = [
           path:'/shop',
           element:<Shop/>
         },
+
+        {
+          path:'/sho',
+          element:<MainContent/>
+         },
+          {
+          path:'/checkout',
+          element:<Checkout/>
+         },
+
+
 ];
 export const router = createBrowserRouter(routes);
 

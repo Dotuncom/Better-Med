@@ -28,7 +28,7 @@ export const mainNav: NavItem[] = [
     name: 'Shop',
     href: '#',
     dropdown: [
-      { name: 'All Products', href: '/products' },
+      { name: 'All Products', href: '/shop' },
       { name: 'My account', href: '/account' },
       { name: 'Cart', href: '/cart' },
       { name: 'Checkout', href: '/checkout' },
